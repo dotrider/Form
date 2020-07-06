@@ -12,7 +12,9 @@ const Form = () => {
       [ bio, setBio ] = useState(''),
       [ step, setStep ] = useState(1);
 
-
+      console.log('firstName', firstName)
+      console.log('last', lastName)
+      console.log('email', email)
 
       const nextStep = () => {
         setStep(step + 1)

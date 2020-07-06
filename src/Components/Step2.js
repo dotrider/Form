@@ -3,7 +3,7 @@ import React from 'react'
 const Step2 = () => {
     return (
         <div>
-            
+            step2
         </div>
     )
 }
