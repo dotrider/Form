@@ -3,12 +3,8 @@ import React from 'react'
 import {TextField, AppBar, Toolbar, Typography, Button} from '@material-ui/core'
 
 
+const Step1 = ({nextStep, setVals: {setFirstName, setLastName, setEmail }, vals:{firstName, lastName, email}, classes}) => {
 
-
-
-
-
-const Step1 = ({nextStep, setVals: {setFirstName, setLastName, setEmail }, vals:{firstName, lastName, email}}) => {
 
     return (
             <>
@@ -41,6 +37,7 @@ const Step1 = ({nextStep, setVals: {setFirstName, setLastName, setEmail }, vals:
         
                 <Button variant="contained" color="primary"
                     onClick={nextStep}
+                    className={classes.margin}
                 >
                     Continue
                 </Button>

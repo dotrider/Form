@@ -1,7 +1,7 @@
 import React from 'react'
 import {Button, List, ListItemText} from '@material-ui/core'
 
-const Step3 = ({vals: {firstName, lastName, email, occupation, city, bio}, prevStep, nextStep}) => {
+const Step3 = ({vals: {firstName, lastName, email, occupation, city, bio}, prevStep, nextStep, classes}) => {
 
      
 
@@ -16,8 +16,17 @@ const Step3 = ({vals: {firstName, lastName, email, occupation, city, bio}, prevS
             <ListItemText primary="City" secondary={city}/>
             <ListItemText primary="Bio" secondary={bio}/>    
         </List>
-        <Button onClick={prevStep}>Back</Button>
-        <Button onClick={nextStep}>Confirm</Button>
+        <Button variant="contained" color="primary"
+        onClick={prevStep} 
+        className={classes.margin}
+        >
+        Back</Button>
+
+        <Button variant="contained" color="primary"
+        onClick={nextStep} 
+        className={classes.margin}
+        >
+        Confirm</Button>
         </>
     )
 }

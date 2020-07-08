@@ -2,7 +2,7 @@ import React from 'react'
 import {TextField, AppBar, Toolbar, Typography, Button} from '@material-ui/core'
 
 
-const Step2 = ({setVals: {setOccupation, setBio, setCity}, nextStep, prevStep, vals:{city, occupation, bio}}) => {
+const Step2 = ({setVals: {setOccupation, setBio, setCity}, nextStep, prevStep, vals:{city, occupation, bio}, classes}) => {
 
 
 
@@ -36,12 +36,14 @@ const Step2 = ({setVals: {setOccupation, setBio, setCity}, nextStep, prevStep, v
         <br/>
         <Button variant="contained" color="primary"
             onClick={prevStep}
+            className={classes.margin}
         >
             Back
         </Button>
 
         <Button variant="contained" color="primary"
             onClick={nextStep}
+            className={classes.margin}
         >
             Continue
         </Button>
