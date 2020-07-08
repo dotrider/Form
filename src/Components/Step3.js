@@ -8,25 +8,27 @@ const Step3 = ({vals: {firstName, lastName, email, occupation, city, bio}, prevS
 
     return (
         <>
-        <List>
-            <ListItemText primary="First Name" secondary={firstName}/>
-            <ListItemText primary="Last Name" secondary={lastName}/>
-            <ListItemText primary="Email" secondary={email}/>
-            <ListItemText primary="Occupation" secondary={occupation}/>
-            <ListItemText primary="City" secondary={city}/>
-            <ListItemText primary="Bio" secondary={bio}/>    
-        </List>
-        <Button variant="contained" color="primary"
-        onClick={prevStep} 
-        className={classes.margin}
-        >
-        Back</Button>
+            <List>
+                <ListItemText primary="First Name" secondary={firstName}/>
+                <ListItemText primary="Last Name" secondary={lastName}/>
+                <ListItemText primary="Email" secondary={email}/>
+                <ListItemText primary="Occupation" secondary={occupation}/>
+                <ListItemText primary="City" secondary={city}/>
+                <ListItemText primary="Bio" secondary={bio}/>    
+            </List>
+                <Button variant="contained" color="primary"
+                onClick={prevStep} 
+                className={classes.margin}
+                >
+                Back
+                </Button>
 
-        <Button variant="contained" color="primary"
-        onClick={nextStep} 
-        className={classes.margin}
-        >
-        Confirm</Button>
+                <Button variant="contained" color="primary"
+                onClick={nextStep} 
+                className={classes.margin}
+                >
+                Confirm
+                </Button>
         </>
     )
 }

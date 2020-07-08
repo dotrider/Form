@@ -5,6 +5,7 @@ import Step3 from './Step3';
 import Success from './Success';
 import { makeStyles } from '@material-ui/core'
 
+//Material UI Btns Style
 const useStyles = makeStyles((theme) => ({
   margin: {
       margin: theme.spacing(4),
@@ -13,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const Form = () => {
-
+//Material UI
   const classes = useStyles();
 
 
@@ -37,6 +38,7 @@ const Form = () => {
 
       const vals = { firstName, lastName, occupation, email, city, bio}
       const setVals = { setFirstName, setLastName, setOccupation, setEmail, setCity, setBio}
+      
 //switch statement instead of return
   switch(step){
     case 1 :

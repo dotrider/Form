@@ -16,37 +16,37 @@ const Step2 = ({setVals: {setOccupation, setBio, setCity}, nextStep, prevStep, v
                 </Typography>
             </Toolbar>
         </AppBar>
-        <TextField
-            label="City"
-            onChange={e => setCity(e.target.value)}
-            value={city}
-        />
-        <br/>
-         <TextField
-            label="Occupation"
-            onChange={e => setOccupation(e.target.value)}
-            value={occupation}
-        />
-        <br/>
-         <TextField
-            label="Bio"
-            onChange={e => setBio(e.target.value)}
-            value={bio}
-        />
-        <br/>
-        <Button variant="contained" color="primary"
-            onClick={prevStep}
-            className={classes.margin}
-        >
-            Back
-        </Button>
+            <TextField
+                label="City"
+                onChange={e => setCity(e.target.value)}
+                value={city}
+            />
+            <br/>
+            <TextField
+                label="Occupation"
+                onChange={e => setOccupation(e.target.value)}
+                value={occupation}
+            />
+            <br/>
+            <TextField
+                label="Bio"
+                onChange={e => setBio(e.target.value)}
+                value={bio}
+            />
+            <br/>
+            <Button variant="contained" color="primary"
+                onClick={prevStep}
+                className={classes.margin}
+            >
+                Back
+            </Button>
 
-        <Button variant="contained" color="primary"
-            onClick={nextStep}
-            className={classes.margin}
-        >
-            Continue
-        </Button>
+            <Button variant="contained" color="primary"
+                onClick={nextStep}
+                className={classes.margin}
+            >
+                Continue
+            </Button>
     </>
     )
 }
