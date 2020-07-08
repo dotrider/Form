@@ -12,9 +12,7 @@ const Form = () => {
       [ bio, setBio ] = useState(''),
       [ step, setStep ] = useState(1);
 
-      console.log('firstName', firstName)
-      console.log('last', lastName)
-      console.log('email', email)
+
 
       const nextStep = () => {
         setStep(step + 1)
@@ -33,7 +31,7 @@ const Form = () => {
     case 2:
       return <Step2 prevStep={prevStep} nextStep={nextStep} vals={vals} setVals={setVals}/>
     case 3:
-      return <Step3/>
+      return <Step3 prevStep={prevStep} vals={vals}/>
 
     default:
       return null

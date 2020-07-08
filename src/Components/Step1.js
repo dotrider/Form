@@ -8,13 +8,8 @@ import {TextField, AppBar, Toolbar, Typography, Button} from '@material-ui/core'
 
 
 
-const Step1 = ({nextStep, setVals: {setFirstName, setLastName, setEmail }, vals}) => {
-console.log(nextStep,'next')
-console.log(vals,'vals')
+const Step1 = ({nextStep, setVals: {setFirstName, setLastName, setEmail }, vals:{firstName, lastName, email}}) => {
 
-const next = () => {
-    nextStep()
-}
     return (
             <>
                 <AppBar position="static">
@@ -27,22 +22,25 @@ const next = () => {
                 <TextField
                     label="First Name"
                     onChange={e => setFirstName(e.target.value)}
+                    value={firstName}
                 />
                 <br/>
                  <TextField
                     label="Last Name"
                     onChange={e => setLastName(e.target.value)}
+                    value={lastName}
                 />
                 <br/>
                  <TextField
                     label="Email"
                     onChange={e => setEmail(e.target.value)}
                     htmlFor="outlined-adornment-email"
+                    value={email}
                 />
                 <br/>
         
                 <Button variant="contained" color="primary"
-                    onClick={next}
+                    onClick={nextStep}
                 >
                     Continue
                 </Button>
