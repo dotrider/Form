@@ -2,7 +2,18 @@ import React from 'react'
 import {TextField, AppBar, Toolbar, Typography, Button} from '@material-ui/core'
 
 
-const Step2 = () => {
+const Step2 = ({setVals: {setOccupation, setBio, setCity}, nextStep, prevStep}) => {
+
+
+    const next = () => {
+        nextStep()
+    }
+
+    const prev = () => {
+        prevStep()
+    }
+
+
     return (
         <>
         <AppBar position="static">
@@ -13,29 +24,28 @@ const Step2 = () => {
             </Toolbar>
         </AppBar>
         <TextField
-            label="First Name"
-            
+            label="City"
+            onChange={e => setCity(e.target.city)}
         />
         <br/>
          <TextField
-            label="Last Name"
-    
+            label="Occupation"
+            onChange={e => setOccupation(e.target.value)}
         />
         <br/>
          <TextField
-            label="Email"
-
-            htmlFor="outlined-adornment-email"
+            label="Bio"
+            onChange={e => setBio(e.target.value)}
         />
         <br/>
         <Button variant="contained" color="primary"
-  
+            onClick={prev}
         >
             Back
         </Button>
 
         <Button variant="contained" color="primary"
-  
+            onClick={next}
         >
             Continue
         </Button>

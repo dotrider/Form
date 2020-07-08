@@ -6,8 +6,8 @@ import Step3 from './Step3';
 const Form = () => {
     const [ firstName, setFirstName ] = useState(''),
       [ lastName, setLastName ] = useState(''),
-      [ occupation, setOccupation ] = useState(''),
       [ email, setEmail ] = useState(''),
+      [ occupation, setOccupation ] = useState(''),
       [ city, setCity ] = useState(''),
       [ bio, setBio ] = useState(''),
       [ step, setStep ] = useState(1);
@@ -31,7 +31,7 @@ const Form = () => {
     case 1 :
       return <Step1 nextStep={nextStep} vals={vals} setVals={setVals}/>
     case 2:
-      return <Step2/>
+      return <Step2 prevStep={prevStep} nextStep={nextStep} vals={vals} setVals={setVals}/>
     case 3:
       return <Step3/>
 
